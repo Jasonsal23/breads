@@ -1,10 +1,9 @@
 const React = require('react')
 const Default = require('./layout/default')
 
-function Index (props) {
-    const breads =props.breads;
+function Index ({breads, title}) {
     return (
-      <Default>
+      <Default title={title}>
         <h2>Index Page</h2>
         {/*<p>I have {breads[0].name} bread</p>*/}
         <ul>
