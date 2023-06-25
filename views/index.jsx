@@ -1,6 +1,7 @@
 const React = require('react')
 const Default = require('./layout/default')
 
+
 function Index ({breads, title}) {
     return (
       <Default title={title}>
@@ -17,8 +18,12 @@ function Index ({breads, title}) {
                 })
             }
         </ul>
+        <div className="newButton">
+    <a href ="/breads/new"><button>Add a new bread</button></a>
+</div>
       </Default>
     )
 }
+
 
 module.exports = Index
