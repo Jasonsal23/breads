@@ -20,10 +20,6 @@ app.get('/', (req, res) => {
   res.send('Welcome to an Awesome App about Breads!')
 })
 
-//404 Page
-app.get('*', (req, res)=>{
-    res.send('404')
-})
 
 //Breads
 const breadsController =require('./controllers/breads_controller.js')
@@ -34,3 +30,7 @@ app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
 })
 
+//404 Page
+app.get('*', (req, res)=>{
+    res.send('404')
+})
