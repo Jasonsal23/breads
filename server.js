@@ -2,9 +2,14 @@
 const express = require('express');
 const morgan = require('morgan');
 const methodOverride=require('method-override')
+const mongoose = require('mongoose')
+require('dotenv').config()
+mongoose.set("strictQuery", false)
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser:true, useUnifiedTopology:true},
+  () => {console.log('connected to mongo: ', process.env.MONGO_URI)})
 
 // CONFIGURATION
-require('dotenv').config()
+//require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
 
