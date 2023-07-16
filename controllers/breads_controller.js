@@ -33,7 +33,7 @@ breads.get('/:id', (req,res)=>{
     .then(foundBread => {
       const bakedBy=foundBread.getBakedBy()
       console.log(bakedBy)
-      res.render('Show',{
+      res.render('show',{
         bread: foundBread
       })
     })
